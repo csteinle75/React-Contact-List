@@ -5,8 +5,9 @@ import {BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-rou
 //components
 import ListContact from './ListContact.js'
 import FullContact from './FullContact.js'
+
 //data
-import users from './randomUser.json'
+// import users from './randomUser.json'
 
 //styles
 import './App.css';
@@ -15,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <div id="contentContainer">
           <Route exact path="/" render={()=><Redirect to="/list" />} />
           <Route path="/list" component={ListContact} />
           <Route path="/detailed/:id" component={FullContact} />
