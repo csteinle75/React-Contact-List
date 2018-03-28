@@ -1,4 +1,4 @@
-//libraries
+//modules
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom'
 
@@ -17,9 +17,11 @@ class App extends Component {
     return (
       <Router>
         <div id="contentContainer">
-          <Route exact path="/" render={()=><Redirect to="/list" />} />
-          <Route path="/list" component={ListContact} />
-          <Route path="/detailed/:id" component={FullContact} />
+          <Switch>
+            <Route exact path="/" render={()=><Redirect to="/list" />} />
+            <Route path="/list" component={ListContact} />
+            <Route path="/detailed/:id" component={FullContact} />
+          </Switch>
         </div>
       </Router>
     )
