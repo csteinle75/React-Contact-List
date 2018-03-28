@@ -11,7 +11,7 @@ import './FullContact.css'
 class FullContact extends Component{
 
 	render(){
-		const uid = parseInt(this.props.match.params.id)
+		const uid = parseInt(this.props.match.params.id, 10)
 		const contact = users.filter(person => person.id === uid)[0]
 
 		return(
@@ -33,8 +33,7 @@ class FullContact extends Component{
 				</div>
 				<div className="contactInfo">
 					<span role="img" aria-label="globe">&#127760;</span> {contact.location.city}, {contact.location.state}
-				</div>
-				
+				</div>			
 			</div>
 		)
 	}
