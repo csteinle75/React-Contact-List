@@ -1,0 +1,38 @@
+li{
+	list-style: none;
+}
+li:hover{
+	background-color: #eee;
+}
+ul{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+a,a:visited,a:hover,a:active{
+	text-decoration: none;
+	color: inherit;
+}
+
+#contactListHead{
+	background-color: #8c8;
+	padding: 10px;
+	font-size: 24px;
+	border-bottom: 2px solid #595;
+}
+.slimContainer{
+	padding: 5px;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	border-bottom: 1px solid #ddd;
+}
+.slimContainer span{
+	text-transform: capitalize;
+}
+
+.contactThumb{
+	border: .5px solid #ccc;
+	border-radius: 100%;
+	margin: 0 10px 0 0;
+}
