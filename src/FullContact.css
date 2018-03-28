@@ -1,0 +1,26 @@
+.fullImageContainer{
+	background-color: #8c8;
+	position: relative;
+	text-align: center;
+}
+.returnArrow{
+	position: absolute;
+	top: 5px;
+	left: 10px;
+}
+.returnArrow div{
+	font-size: 40px;
+}
+.contactPic{
+	border-radius: 100%;
+	padding: 20px;
+}
+.contactInfo{
+	font-size: 18px;
+	padding: 5px 10px;
+	text-transform: capitalize;
+	border-bottom: 1px solid #ddd;
+}
+.email{
+	text-transform: none
+}

@@ -11,31 +11,30 @@ import './FullContact.css'
 class FullContact extends Component{
 
 	render(){
-		let uid = this.props.match.params.id
-		let contact = users.filter(person => person.id == uid)[0]
-		// console.log(typeof uid)
-		// console.log(typeof contact.id)
-		
-		console.log(contact)
+		const uid = parseInt(this.props.match.params.id)
+		const contact = users.filter(person => person.id === uid)[0]
 
 		return(
 			<div>
-				<div>
-					<img src={contact.picture.large} alt="Contact"/>
+				<div className="fullImageContainer">
+					<Link to="/list" className="returnArrow">
+						<div>&#10094;</div>
+					</Link>
+					<img src={contact.picture.large} className="contactPic" alt="Contact"/>
 				</div>
-				<div>
-					{contact.name.first} {contact.name.last}
+				<div className="contactInfo">
+					<span role="img" aria-label="bust">&#128100;</span> {contact.name.first} {contact.name.last}
 				</div>
-				<div>
-					{contact.email}
+				<div className="contactInfo email">
+					<span role="img" aria-label="envelope">&#128231;</span> {contact.email}
 				</div>
-				<div>
-					{contact.phone}
+				<div className="contactInfo">
+					<span role="img" aria-label="telephone receiver">&#128222;</span> {contact.phone}
 				</div>
-				<div>
-					{contact.location.city}, {contact.location.state}
+				<div className="contactInfo">
+					<span role="img" aria-label="globe">&#127760;</span> {contact.location.city}, {contact.location.state}
 				</div>
-				<Link to="/list">Return to Contacts</Link>
+				
 			</div>
 		)
 	}
